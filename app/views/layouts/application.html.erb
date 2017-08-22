@@ -6,6 +6,9 @@
 
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -27,7 +30,7 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
       <li>
-        <form><a href="#" class="btn btn-success navbar-btn btn-sm">Ask Questions</a>
+        <form><a href="#" class="btn btn-success navbar-btn btn-sm" data-toggle="modal" data-target="#new-question-modal">Ask Questions</a>
         </form>
       </li>
       </ul>
@@ -37,16 +40,73 @@
 </nav>
     <div class="container">
       <%= yield %>
+
+    <!-- Modal -->
+<div class="modal fade" id="new-question-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">New Question</h4>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Submit</button>
+      </div>
+    </div>
+  </div>
+</div>
       <div class="media">
-  <div class="media-left">
-    <a href="#">
-      <img class="media-object" src="..." alt="...">
-    </a>
-  </div>
-  <div class="media-body">
-    <h4 class="media-heading">Media heading</h4>
-    ...
-  </div>
+  <div class="container">
+    <div class="media">
+      <div class="media-left">
+        <a href="#">
+          <img class="media-object" src="http://www.gravatar.com/avatar/424242">
+        </a>
+      </div>
+      <div class="media-body">
+        <h4 class="media-heading">user@email.com asked:</h4>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, expedita. Ullam voluptatem suscipit, modi corrupti assumenda fugiat a qui ex dolorum, architecto nulla quia accusantium, vitae consectetur cum doloribus debitis.
+        <div>
+          <a href="/questions/12" class="btn btn-success btn-xs">View Answers</a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="media">
+      <div class="media-left">
+        <a href="#">
+          <img class="media-object" src="http://www.gravatar.com/avatar/424242">
+        </a>
+      </div>
+      <div class="media-body">
+        <h4 class="media-heading">user@email.com asked:</h4>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, expedita. Ullam voluptatem suscipit, modi corrupti assumenda fugiat a qui ex dolorum, architecto nulla quia accusantium, vitae consectetur cum doloribus debitis.
+        <div>
+          <a href="/questions/12" class="btn btn-success btn-xs">View Answers</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="media">
+      <div class="media-left">
+        <a href="#">
+          <img class="media-object" src="http://www.gravatar.com/avatar/424242">
+        </a>
+      </div>
+      <div class="media-body">
+        <h4 class="media-heading">user@email.com asked:</h4>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, expedita. Ullam voluptatem suscipit, modi corrupti assumenda fugiat a qui ex dolorum, architecto nulla quia accusantium, vitae consectetur cum doloribus debitis.
+        <div>
+          <a href="/questions/12" class="btn btn-success btn-xs">View Answers</a>
+        </div>
+      </div>
+    </div>
+</div>
 </div>
     </div>
 </body>
