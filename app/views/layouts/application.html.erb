@@ -14,100 +14,15 @@
 <body>
 
 
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#">History of the Universe</a>
-    </div>
+     <%= render 'home/navbar'%>
 
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav navbar-right">
-      <li>
-        <form><a href="#" class="btn btn-success navbar-btn btn-sm" data-toggle="modal" data-target="#new-question-modal">Ask Questions</a>
-        </form>
-      </li>
-      </ul>
-    </div>  
-    
-  </div><!-- /.container-fluid -->
-</nav>
-    <div class="container">
       <%= yield %>
 
-    <!-- Modal -->
-<div class="modal fade" id="new-question-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">New Question</h4>
-      </div>
-      <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Submit</button>
-      </div>
-    </div>
-  </div>
-</div>
-      <div class="media">
-  <div class="container">
-    <div class="media">
-      <div class="media-left">
-        <a href="#">
-          <img class="media-object" src="http://www.gravatar.com/avatar/424242">
-        </a>
-      </div>
-      <div class="media-body">
-        <h4 class="media-heading">user@email.com asked:</h4>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, expedita. Ullam voluptatem suscipit, modi corrupti assumenda fugiat a qui ex dolorum, architecto nulla quia accusantium, vitae consectetur cum doloribus debitis.
-        <div>
-          <a href="/questions/12" class="btn btn-success btn-xs">View Answers</a>
-        </div>
-      </div>
+      <%= render 'home/new_question_modal'%>
 
-    </div>
 
-    <div class="media">
-      <div class="media-left">
-        <a href="#">
-          <img class="media-object" src="http://www.gravatar.com/avatar/424242">
-        </a>
-      </div>
-      <div class="media-body">
-        <h4 class="media-heading">user@email.com asked:</h4>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, expedita. Ullam voluptatem suscipit, modi corrupti assumenda fugiat a qui ex dolorum, architecto nulla quia accusantium, vitae consectetur cum doloribus debitis.
-        <div>
-          <a href="/questions/12" class="btn btn-success btn-xs">View Answers</a>
-        </div>
-      </div>
-    </div>
 
-    <div class="media">
-      <div class="media-left">
-        <a href="#">
-          <img class="media-object" src="http://www.gravatar.com/avatar/424242">
-        </a>
-      </div>
-      <div class="media-body">
-        <h4 class="media-heading">user@email.com asked:</h4>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, expedita. Ullam voluptatem suscipit, modi corrupti assumenda fugiat a qui ex dolorum, architecto nulla quia accusantium, vitae consectetur cum doloribus debitis.
-        <div>
-          <a href="/questions/12" class="btn btn-success btn-xs">View Answers</a>
-        </div>
-      </div>
-    </div>
-</div>
-</div>
     </div>
 </body>
+
 </html>
